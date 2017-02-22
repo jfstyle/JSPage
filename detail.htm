@@ -1,0 +1,363 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>活动详情</title>
+    <link rel="stylesheet" type="text/css" href="css/sina.css">
+    <style>
+        .g-bd{margin: 0px;}
+        .g-mn2c{width: 100%;}
+        .g-mn2{float: left;width: 50%;}
+        .g-sd2{float: left;width: 20%;}
+        .detail-view{background: none repeat scroll 0 0 #F3F4EE;border: 1px solid #E2E2E2;border-top: 1px solid #E2E2E2;left: 0;overflow: hidden;clear: both;margin-left: 13px;margin-bottom: 15px; /*width: 36%;*/}
+        .detail-view .detail_images{float: left;}
+        .detail-view .detail_info{float: right; font-family: "Helvetica Neue" ,Helvetica, "Nimbus Sans L" ,Arial,sans-serif;color: #525049;margin-right: 20px;margin-top: 20px;text-align: justify;width: 40%;font-size: 12px;}
+        .detail-view .detail_info label{font-size: 12px;text-transform: uppercase;letter-spacing: 1px;line-height: 20px;}
+        .product-price-info{height: 26px;line-height: 26px;color: #666;overflow: hidden;padding: 3px 0px;}
+        .product-price-info strong{float: left;color: #999;font-weight: normal;font-size: 14px;}
+        .product-price-info .price{position: relative;top: -1px;float: left;height: 26px;overflow: hidden;}
+        .product-price-info .price span{float: left;}
+        .detail_picinfo{font-family: "Helvetica Neue" ,Helvetica, "Nimbus Sans L" ,Arial,sans-serif;color: #525049;margin-right: 20px;margin-top: 20px;text-align: justify;width: 50%;font-size: 12px;}
+        .detail_picftoor{width: 30%;line-height: 50px;}
+        
+        .zzsc{margin-left: 12px;margin-bottom: 15px;background: #f0f0f0;font-family: '微软雅黑';}
+        .zzsc .tab{background: #ccc;}
+        .zzsc .tab a{display: block;padding: 10px 20px;float: left;text-decoration: none;color: #333;}
+        .zzsc .tab a:hover{background: #E64E3F;color: #fff;text-decoration: none;}
+        .zzsc .tab a.on{background: #E64E3F;color: #fff;text-decoration: none;}
+        .zzsc .content{/*overflow: hidden;*/}
+        .zzsc .content ul{padding: 0px;margin: 0px;}
+        .zzsc .content li{display: none;}
+        .zzsc .content h4{text-align: center;}
+        .rich{width: 99%;height: 300px;border: 1px solid red;margin-bottom: 5px;overflow: auto;}
+        /*---------------------------------------发表评价------------------------------------*/
+        #qq{width: 100%;height: 60%;background: #fff;border-radius: 5px;}
+        #qq p{font-size: 12px;color: #666;font-family: "微软雅黑";line-height: 45px; text-indent: 20px;}
+        #qq .message{width: 90%;height: 30%;margin: 0px auto;outline: none;border: 1px solid #ddd;font-size: 12px;color: #666;}
+        #qq .But{width: 100%;height: 35px; position: relative;margin: 15px -30px 0px;}
+        #qq .But img.bq{float: left;}
+        #qq .But span.submit{width: 80px;height: 30px;background: #ff8140;display: block;float: right;line-height: 30px;border-radius: 5px;cursor: pointer;color: #fff;font-size: 12px;text-align: center;font-family: "微软雅黑";}   
+        /*msgCon begin*/
+        .msgCon{width: 100%;height: 20%;margin: 0px auto;}
+        .msgCon .msgBox{background: #fff;padding: 10px;margin-top: 10px;}
+        .msgCon .msgBox dl{height: 25px;border-bottom: 1px dotted #ddd;}
+        .msgCon .msgBox dl dt{width: 50px;height: 50px;float: left;}
+        .msgCon .msgBox dl dt img{border-radius: 25px;}
+        .msgCon .msgBox dl dd{width: 500px;height: 50px;line-height: 50px;float: right;font-size: 16px;font-family: "微软雅黑";}
+        .msgCon .msgBox .msgTxt{font-size: 12px;color: #666; /*line-height: 25px;*/}
+        /*-------------------相关活动图片提示信息-------------------------*/
+        .col-sm-product{border: 1px solid #e6e6e6;padding: 5px;margin: 0px 5px 5px 5px;}
+        .box{height: 240px;position: relative; /*background:red;*/cursor: pointer;}
+        .box .bmbox{width: 100%; background: black;position: absolute;bottom: 0px;left: 0px;display: none;font: 12px/30px "宋体";color: white;text-align: center;}
+        .box:hover .bmbox{width: 100%; background:rgba(0,0,0,.5);position: absolute;bottom: 0px;left: 0px;display: block;font: 12px/30px "宋体";color: white;text-align: center;}
+        .module {margin: 0px 5px 5px 5px;border: 1px solid #e6e6e6;}
+        .module-header {padding: 10px;border-bottom: 1px solid #e6e6e6;background: #fafafa;line-height: 5px;}
+        .refer {display: block;width: 100%;height: 28px;margin: 0px;}
+        .refer a {display: block;height: 26px;line-height: 26px;border: 1px solid #e6e6e6;text-align: center;color: #666;}
+        a {text-decoration: none;}
+        /* 左图右文图文列表-默认竖排 */
+        .m-list3{padding:1px 0 0;zoom:1;}
+        .m-list3 ul{margin:-11px 0 0;}
+        .m-list3 li{display:inline;float:left;width:90%;margin:10px 0 0;border: 1px solid red;}
+        .m-list3 .txt{/*float:right;height:95px;width:50%;overflow:hidden;*/margin-left:-110px;}
+        .m-list3 h3,.m-list3 p{margin-left:110px;overflow:hidden;line-height:18px;}
+        .m-list3 h3{margin-bottom:5px;}
+        .m-list3 h3 a,.m-list3 h3 a:hover{color:#333;}
+        .m-list3 .u-img{float:left;width:350px;height:240px;}
+        .m-list3 .u-img2{float:left;/*width:350px;height:240px;*/padding: 50px 20px;}
+        /* 横排 */
+        .m-list3-x ul{margin:-11px 0 0 -10px;}
+        .m-list3-x li{width:90%;margin:10px 0 0;}
+        .m-list3 p{display: block; height: 16px;line-height: 16px;text-align: left;color: #666;}
+    </style>
+</head>
+<body>
+    <div class="g-bd">
+        <div class="g-mn2">
+            <div class="g-mn2c">
+                <!-------------------------------------------------------------------------------------左边活动主题--------------------------------------------------------->
+                <!--<div class="detail-view" id="detail-12">
+                    <div class="detail_picinfo">
+                        <img src="images/product-01.jpg" class="detail_images" width="340" height="310" alt=""></div>
+                    <div class="detail_info">
+                        <div class="product-price">
+                            <label class="item_name">
+                                活动主题</label>
+                            <div class="product-price-info">
+                                <strong>讲座：</strong>
+                                <div class="price price-normal">
+                                    <span>聚会</span>
+                                </div>
+                            </div>
+                            <div class="product-price-info">
+                                <strong class="merchant-price-text">所在位置：</strong>
+                                <div class="price price-normal">
+                                    <span>成华区</span>
+                                </div>
+                            </div>
+                            <div class="product-price-info">
+                                <strong class="merchant-price-text">主办场馆：</strong>
+                                <div class="price price-normal">
+                                    <span>成华区图书馆</span>
+                                </div>
+                            </div>
+                            <div class="product-price-info">
+                                <strong class="merchant-price-text">详细地址：</strong>
+                                <div class="price price-normal">
+                                    <span>成华区社区</span>
+                                </div>
+                            </div>
+                            <div class="product-price-info">
+                                <strong class="merchant-price-text">日期：</strong>
+                                <div class="price price-normal">
+                                    <span>2016-12-12</span>
+                                </div>
+                            </div>
+                            <div class="product-price-info">
+                                <strong class="merchant-price-text">时间：</strong>
+                                <div class="price price-normal">
+                                    <span>8:30</span>
+                                </div>
+                            </div>
+                            <div class="product-price-info">
+                                <strong class="merchant-price-text">联系人：</strong>
+                                <div class="price price-normal">
+                                    <span>张三</span>
+                                </div>
+                            </div>
+                            <div class="product-price-info">
+                                <strong class="merchant-price-text">联系电话：</strong>
+                                <div class="price price-normal">
+                                    <span>12345678911</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail_picftoor">
+                        <div class="fx_bd">
+                            <div class="bdsharebuttonbox bdshare-button-style0-24">
+                                <a title="收藏" name="bds_soc" class="bds_soc" data-cmd="soc"></a>
+                                <a title="赞" name="bds_zan" class="bds_zan" data-cmd="zan"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+                <div class="detail-view" id="detail-12">
+                    <div class="m-list3">
+                        <ul class="f-cb">
+                            <li>
+                                <div class="u-img2"><a href="#"><img src="images/product-01.jpg" alt="" /></a></div>
+                                <div class="txt">
+                                    <h3><a href="#">活动主题</a></h3>
+                                        <p>讲座：聚会</p>
+                                        <p>所在位置：成华区</p>
+                                        <p>主办场馆：成华区图书馆</p>
+                                        <p>详细地址：成华区社区</p>
+                                        <p>日期：2016-12-12</p>
+                                        <p>时间：8:30</p>
+                                        <p>联系人：张三</p>
+                                        <p>联系电话：12345678911</p>
+                                </div>
+                            </li>
+                        </ul> 
+                    </div>
+                    <div class="m-list3 m-list3-x">
+                        <ul class="f-cb">
+                            <li>
+                                <div class="fx_bd">
+                                    <div class="bdsharebuttonbox bdshare-button-style0-24">
+                                        <a title="收藏" name="bds_soc" class="bds_soc" data-cmd="soc"></a>
+                                        <a title="赞" name="bds_zan" class="bds_zan" data-cmd="zan"></a>
+                                    </div>
+                                    <div id="socialShare"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 评价代码部分begin -->
+                <div class="zzsc">
+                    <div class="tab">
+                        <a href="javascript:;" class="on">详细介绍</a> 
+                        <a href="javascript:;">活动回顾1</a> 
+                        <a href="javascript:;">活动回顾2</a> 
+                        <a href="javascript:;">活动回顾3</a>
+                    </div>
+                    <div class="content">
+                        <ul>
+                            <li style="display: block;">
+                                <img src="images/map.jpg" />
+                                <h4>
+                                    详细内容</h4>
+                                <div class="rich">
+                                    富文本内容
+                                </div>
+                                <div class="rich">
+                                    <div id="qq">
+                                        <p>
+                                            评论及发表评论</p>
+                                        <div class="message" contenteditable='true'>
+                                        </div>
+                                        <div class="But">
+                                            <span class='submit'>发表</span>
+                                        </div>
+                                    </div>
+                                    <!--msgCon begin-->
+                                    <div class="msgCon">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/map.jpg" />
+                                <h4>
+                                    活动回顾2</h4>
+                                <div class="rich">
+                                    活动回顾2内容
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/map.jpg" />
+                                <h4>
+                                    活动回顾3</h4>
+                                <div class="rich">
+                                    活动回顾3内容
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/map.jpg" />
+                                <h4>
+                                    活动回顾3</h4>
+                                <div class="rich">
+                                    活动回顾3内容
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="g-sd2">
+            <!-------------------------------------------------------------------------------------右边相关活动--------------------------------------------------------->
+            <div class="module merchant-module">
+                <div class="module-header">
+                    <h3>相关活动</h3>
+                </div>
+            </div>
+            <div class="col-sm-product">
+                <div class="box" style="background-image: url(images/product-01.jpg);">
+                    <div class="bmbox">
+                        讲座：聚会 所在位置：成华区 主办场馆：成华区图书馆 详细地址：成华区社区 日期：2016-12-12 时间：8:30 联系人：张三 联系电话：12345678911</div>
+                </div>
+                <span class="refer"><a href="#" rel="nofollow" target="_blank">活动标题1</a></span>
+            </div>
+            <div class="col-sm-product">
+                <div class="box" style="background-image: url(images/product-02.jpg);">
+                    <div class="bmbox">
+                        讲座：聚会 所在位置：成华区 主办场馆：成华区图书馆 详细地址：成华区社区 日期：2016-12-12 时间：8:30 联系人：张三 联系电话：12345678911</div>
+                </div>
+                <span class="refer"><a href="#" rel="nofollow" target="_blank">活动标题2</a></span>
+            </div>
+            <div class="col-sm-product">
+                <div class="box" style="background-image: url(images/product-03.jpg);">
+                    <div class="bmbox">
+                        讲座：聚会 所在位置：成华区 主办场馆：成华区图书馆 详细地址：成华区社区 日期：2016-12-12 时间：8:30 联系人：张三 联系电话：12345678911</div>
+                </div>
+                <span class="refer"><a href="#" rel="nofollow" target="_blank">活动标题3</a></span>
+            </div>
+            <div class="col-sm-product">
+                <div class="box" style="background-image: url(images/product-04.jpg);">
+                    <div class="bmbox">
+                        讲座：聚会 所在位置：成华区 主办场馆：成华区图书馆 详细地址：成华区社区 日期：2016-12-12 时间：8:30 联系人：张三 联系电话：12345678911</div>
+                </div>
+                <div>
+                    <span class="ct-product-title">活动标题4</span>
+                </div>
+            </div>
+            <div class="col-sm-product">
+                <div class="box" style="background-image: url(images/product-05.jpg);">
+                    <div class="bmbox">
+                        讲座：聚会 所在位置：成华区 主办场馆：成华区图书馆 详细地址：成华区社区 日期：2016-12-12 时间：8:30 联系人：张三 联系电话：12345678911</div>
+                </div>
+                <div>
+                    <span class="ct-product-title">活动标题5</span>
+                </div>
+            </div>
+            <div class="col-sm-product">
+                <div class="box" style="background-image: url(images/product-06.jpg);">
+                    <div class="bmbox">
+                        讲座：聚会 所在位置：成华区 主办场馆：成华区图书馆 详细地址：成华区社区 日期：2016-12-12 时间：8:30 联系人：张三 联系电话：12345678911</div>
+                </div>
+                <div>
+                    <span class="ct-product-title">活动标题6</span>
+                </div>
+            </div>
+    </div>
+    </div>
+    
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/share.js"></script>
+    <script>
+        $(function () {
+            //----------------------------------------------收藏点赞-------------------------------------------------
+            $(document).on("click", "a[name='bds_soc']", function () {//修改成这样的写法  
+                if ($(this).hasClass("bds_soc1"))
+                    $(this).removeClass("bds_soc1").addClass("bds_soc");
+                else
+                    $(this).addClass("bds_soc1");
+            });
+            $(document).on("click", "a[name='bds_zan']", function () {
+                if ($(this).hasClass("bds_zan1"))
+                    $(this).removeClass("bds_zan1").addClass("bds_zan");
+                else
+                    $(this).addClass("bds_zan1");
+            });
+            //----------------------------------------------分享-------------------------------------------------
+            $("#socialShare").socialShare({
+                content: '',
+                url: '',
+                titile: ''
+            });
+            //---------------------------------------------选项卡------------------------------------------------
+            $(".zzsc .tab a").click(function () {
+                $(this).addClass('on').siblings().removeClass('on');
+                var index = $(this).index();
+                number = index;
+                $('.zzsc .content li').hide();
+                $('.zzsc .content li:eq(' + index + ')').show();
+            });
+            //---------------------------------------------相关活动提示------------------------------------------------
+            var auto = 1;  //等于1则自动切换，其他任意数字则不自动切换mouseover
+            if (auto == 1) {
+                var number = 0;
+                var maxNumber = $('.zzsc .tab a').length;
+                function autotab() {
+                    number++;
+                    number == maxNumber ? number = 0 : number;
+                    $('.zzsc .tab a:eq(' + number + ')').addClass('on').siblings().removeClass('on');
+                    $('.zzsc .content ul li:eq(' + number + ')').show().siblings().hide();
+                }
+                //var tabChange = setInterval(autotab,3000);
+                //鼠标悬停暂停切换
+                $('.zzsc').mouseover(function () {
+                    //clearInterval(tabChange);
+                });
+                $('.zzsc').mouseout(function () {
+                    //tabChange = setInterval(autotab,3000);
+                });
+            }
+        });
+        //---------------------------------------------发表评价------------------------------------------------
+        //点击发表按扭，发表内容
+        $("span.submit").click(function () {
+
+            var txt = $(".message").html();
+            if (txt == "") {
+                $('.message').focus(); //自动获取焦点
+                return;
+            }
+
+            $(".msgCon").prepend("<div class='msgBox'><dl>游客</dl><div class='msgTxt'>" + txt + "</div></div>");
+        });
+    </script>
+    <!-- 代码部分end -->
+</body>
+</html>

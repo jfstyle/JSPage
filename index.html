@@ -1,0 +1,397 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>活动</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/sina.css">
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/jscript.page.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+    <!--查询-->
+    <ul class="select">
+        <li class="select-list">
+            <dl id="select1">
+                <dt>类型：</dt>
+                <dd class="select-all selected">
+                    <a href="#">不限</a></dd>
+                <dd date-type="1">
+                    <a href="#">电影</a></dd>
+                <dd date-type="2">
+                    <a href="#">讲座</a></dd>
+                <dd date-type="3">
+                    <a href="#">演出</a></dd>
+                <dd date-type="4">
+                    <a href="#">展览</a></dd>
+            </dl>
+        </li>
+        <li class="select-list">
+            <dl id="select2">
+                <dt>区域：</dt>
+                <dd>
+                    <a href="#">锦江区</a></dd>
+                <dd>
+                    <a href="#">成华区</a></dd>
+                <dd>
+                    <a href="#">武候区</a></dd>
+                <dd>
+                    <a href="#">青羊区</a></dd>
+                <dd>
+                    <a href="#">金牛区</a></dd>
+            </dl>
+        </li>
+        <li class="select-list">
+            <dl id="select3">
+                <dt>时间：</dt>
+                <dd>
+                    <a href="#">5天内</a></dd>
+                <dd>
+                    <a href="#">5-10天内</a></dd>
+                <dd>
+                    <a href="#">15天以上</a></dd>
+                <dd>
+                    <a href="#">1个月以内</a></dd>
+            </dl>
+        </li>
+        <li class="select-list">
+            <dl id="select4">
+                <dt>状态：</dt>
+                <dd>
+                    <a href="#">免费前往</a></dd>
+                <dd>
+                    <a href="#">付费前往</a></dd>
+            </dl>
+        </li>
+        <li class="select-result">
+			<dl>
+				<dt>已选条件：</dt>
+				<dd class="select-no">暂时没有选择过滤条件</dd>
+			</dl>
+		</li>
+    </ul>
+    <!--场馆展示-->
+    <div class="select2">
+        <ul class="sorting">
+            <li><a href="#" class="sort_able">智能排序</a></li>
+            <li><a href="#" class="sort_able">即将开始</a></li>
+            <li><a href="#" class="sort_able">即将结束</a></li>
+            <li><a href="#" class="sort_able">最新发布</a></li>
+            <li><a href="#" class="sort_able">人气最高</a></li>
+            <li><a href="#" class="sort_able">评价最好</a></li>
+            <li style="clear: both"></li>
+        </ul>
+        <div id="list-col">
+        <div class="col-sm-4">
+            <div class="ct-product">
+                <div class="image">
+                    <img src="images/product-01.jpg" alt=""></div>
+                <div class="inner">
+                    <span class="ct-product-title">费用:20元</span><span class="ct-product-titler">110人浏览</span>
+                    <p class="ct-product-description">A very delicious macaroonsA very delicious macaroons</p>
+                    <span class="ct-product-title">时间:2016-12-24</span><span class="ct-product-titler">地点:武候区</span>
+                    <div class="fx_bd">
+                        <div class="bdsharebuttonbox bdshare-button-style0-24">
+                            <a title="收藏" name="bds_soc" class="bds_soc" data-cmd="soc"></a>
+                            <a title="赞" name="bds_zan" class="bds_zan" data-cmd="zan"></a>
+                        </div>
+                    </div>
+<!--                    <div class="praise">
+	                    <span id="praise"><img src="images/zan.png" id="praise-img" /></span>
+	                    <span id="praise-txt">1455</span>
+	                    <span id="add-num"><em>+1</em></span>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="ct-product">
+                <div class="image">
+                    <img src="images/product-02.jpg" alt=""></div>
+                <div class="inner">
+                    <span class="ct-product-title">费用:20元</span><span class="ct-product-titler">110人浏览</span>
+                    <p class="ct-product-description">
+                        A very delicious macaroonsA very delicious macaroons</p>
+                    <span class="ct-product-title">时间:2016-12-24</span><span class="ct-product-titler">地点:武候区</span>
+                    <div class="fx_bd">
+                        <div class="bdsharebuttonbox bdshare-button-style0-24">
+                            <a title="收藏" name="bds_soc" class="bds_soc" data-cmd="soc"></a>
+                            <a title="赞" name="bds_zan" class="bds_zan" data-cmd="zan"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="ct-product">
+                <div class="image">
+                    <img src="images/product-03.jpg" alt=""></div>
+                <div class="inner">
+                    <span class="ct-product-title">费用:20元</span><span class="ct-product-titler">110人浏览</span>
+                    <p class="ct-product-description">
+                        A very delicious macaroonsA very delicious macaroons</p>
+                    <span class="ct-product-title">时间:2016-12-24</span><span class="ct-product-titler">地点:武候区</span>
+                    <div class="fx_bd">
+                        <div class="bdsharebuttonbox bdshare-button-style0-24">
+                            <a title="收藏" name="bds_soc" class="bds_soc" data-cmd="soc"></a>
+                            <a title="赞" name="bds_zan" class="bds_zan" data-cmd="zan"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="ct-product">
+                <div class="image">
+                   <img src="images/product-04.jpg" alt=""></div>
+                <div class="inner">
+                    <span class="ct-product-title">费用:20元</span><span class="ct-product-titler">110人浏览</span>
+                    <p class="ct-product-description">A very delicious macaroonsA very delicious macaroons</p>
+                    <span class="ct-product-title">时间:2016-12-24</span><span class="ct-product-titler">地点:武候区</span>
+                    <div class="fx_bd">
+                        <div class="bdsharebuttonbox bdshare-button-style0-24">
+                            <a title="收藏" name="bds_soc" class="bds_soc" data-cmd="soc"></a>
+                            <a title="赞" name="bds_zan" class="bds_zan" data-cmd="zan"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="ct-product">
+                <div class="image">
+                    <img src="images/product-05.jpg" alt=""></div>
+                <div class="inner">
+                    <span class="ct-product-title">费用:20元</span><span class="ct-product-titler">110人浏览</span>
+                    <p class="ct-product-description">A very delicious macaroonsA very delicious macaroons</p>
+                    <span class="ct-product-title">时间:2016-12-24</span><span class="ct-product-titler">地点:武候区</span>
+                    <div class="fx_bd">
+                        <div class="bdsharebuttonbox bdshare-button-style0-24">
+                            <a title="收藏" name="bds_soc" class="bds_soc" data-cmd="soc"></a>
+                            <a title="赞" name="bds_zan" class="bds_zan" data-cmd="zan"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="ct-product">
+                <div class="image">
+                    <img src="images/product-06.jpg" alt=""></div>
+                <div class="inner">
+                    <span class="ct-product-title">费用:20元</span><span class="ct-product-titler">110人浏览</span>
+                    <p class="ct-product-description">A very delicious macaroonsA very delicious macaroons</p>
+                    <span class="ct-product-title">时间:2016-12-24</span><span class="ct-product-titler">地点:武候区</span>
+                    <div class="fx_bd">
+                        <div class="bdsharebuttonbox bdshare-button-style0-24">
+                            <a title="收藏" name="bds_soc" class="bds_soc" data-cmd="soc"></a>
+                            <a title="赞" name="bds_zan" class="bds_zan" data-cmd="zan"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="ct-product">
+                <div class="image">
+                    <img src="images/product-06.jpg" alt=""></div>
+                <div class="inner">
+                    <span class="ct-product-title">费用:20元</span><span class="ct-product-titler">110人浏览</span>
+                    <p class="ct-product-description">A very delicious macaroonsA very delicious macaroons</p>
+                    <span class="ct-product-title">时间:2016-12-24</span><span class="ct-product-titler">地点:武候区</span>
+                    <div class="fx_bd">
+                        <div class="bdsharebuttonbox bdshare-button-style0-24">
+                            <a title="收藏" name="bds_soc" class="bds_soc" data-cmd="soc"></a>
+                            <a title="赞" name="bds_zan" class="bds_zan" data-cmd="zan"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="ct-product">
+                <div class="image">
+                    <img src="images/product-06.jpg" alt=""></div>
+                <div class="inner">
+                    <span class="ct-product-title">费用:20元</span><span class="ct-product-titler">110人浏览</span>
+                    <p class="ct-product-description">A very delicious macaroonsA very delicious macaroons</p>
+                    <span class="ct-product-title">时间:2016-12-24</span><span class="ct-product-titler">地点:武候区</span>
+                    <div class="fx_bd">
+                        <div class="bdsharebuttonbox bdshare-button-style0-24">
+                            <a title="收藏" name="bds_soc" class="bds_soc" data-cmd="soc"></a>
+                            <a title="赞" name="bds_zan" class="bds_zan" data-cmd="zan"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="ct-product">
+                <div class="image">
+                    <img src="images/product-06.jpg" alt=""></div>
+                <div class="inner">
+                    <span class="ct-product-title">费用:20元</span><span class="ct-product-titlerr">110人浏览</span>
+                    <p class="ct-product-description">A very delicious macaroonsA very delicious macaroons</p>
+                    <span class="ct-product-title">时间:2016-12-24</span><span class="ct-product-titler">地点:武候区</span>
+                    <div class="fx_bd">
+                        <div class="bdsharebuttonbox bdshare-button-style0-24">
+                            <a title="收藏" name="bds_soc" class="bds_soc" data-cmd="soc"></a>
+                            <a title="赞" name="bds_zan" class="bds_zan" data-cmd="zan"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- 分页代码begin -->
+    <div class="select2">
+        <div class="tcdPageCode">
+        </div>
+    </div>
+    <!-- 分页代码部分end -->
+    <script>
+
+        $(document).ready(function () {
+            //-----------------------------------点赞功能-------------------------------------------------
+            //            $("#praise").click(function () {
+            //                var praise_img = $("#praise-img");
+            //                var text_box = $("#add-num");
+            //                var praise_txt = $("#praise-txt");
+            //                var num = parseInt(praise_txt.text());
+            //                if (praise_img.attr("src") == ("images/yizan.png")) {
+            //                    $(this).html("<img src='images/zan.png' id='praise-img' class='animation' />");
+            //                    praise_txt.removeClass("hover");
+            //                    text_box.show().html("<em class='add-animation'>-1</em>");
+            //                    $(".add-animation").removeClass("hover");
+            //                    num -= 1;
+            //                    praise_txt.text(num);
+            //                } else {
+            //                    $(this).html("<img src='images/yizan.png' id='praise-img' class='animation' />");
+            //                    praise_txt.addClass("hover");
+            //                    text_box.show().html("<em class='add-animation'>+1</em>");
+            //                    $(".add-animation").addClass("hover");
+            //                    num += 1;
+            //                    praise_txt.text(num);
+            //                }
+            //            });
+            $(document).on("click", "a[name='bds_soc']", function () {//修改成这样的写法  
+                if ($(this).hasClass("bds_soc1"))
+                    $(this).removeClass("bds_soc1").addClass("bds_soc");
+                else
+                    $(this).addClass("bds_soc1");
+            });
+            $(document).on("click", "a[name='bds_zan']", function () {
+                if ($(this).hasClass("bds_zan1"))
+                    $(this).removeClass("bds_zan1").addClass("bds_zan");
+                else
+                    $(this).addClass("bds_zan1");
+            }); 
+            //-----------------------------------点击分页-------------------------------------------------
+            $(".tcdPageCode").createPage({
+                pageCount: 9,
+                current: 1,
+                backFn: function (p) {
+                    var strHtml = "";
+
+                    for (var i = 0; i < 6; i++) {
+                        strHtml += '<div class="col-sm-4">';
+                        strHtml += '    <div class="ct-product">';
+                        strHtml += '        <div class="image">';
+                        strHtml += '            <img src="images/product-06.jpg" alt=""></div>';
+                        strHtml += '        <div class="inner">';
+                        strHtml += '            <span class="ct-product-title">费用:20元</span><span class="ct-product-titler">11' + i + '人浏览</span>';
+                        strHtml += '            <p class="ct-product-description">';
+                        strHtml += '                A very delicious macaroonsA very delicious macaroons</p>';
+                        strHtml += '            <span class="ct-product-title">时间:2016-12-24</span><span class="ct-product-titler">地点:武候区</span>';
+                        //                        strHtml += '            <p class="ct-product-price">';
+                        //                        strHtml += '                ★</p>';
+                        strHtml += '                        <div class="fx_bd">';
+                        strHtml += '                            <div class="bdsharebuttonbox bdshare-button-style0-24">';
+                        strHtml += '                                <a title="收藏" name="bds_soc" class="bds_soc" data-cmd="soc"></a>';
+                        strHtml += '                                <a title="赞" name="bds_zan" class="bds_zan" data-cmd="zan"></a>';
+                        strHtml += '                            </div>';
+                        strHtml += '                        </div>';
+                        strHtml += '        </div>';
+                        strHtml += '    </div>';
+                        strHtml += '</div>';
+                    }
+                    $("#list-col").html(strHtml);
+                }
+            });
+            //-----------------------------------自动加载分页---------------------------------------------
+            $(window).scroll(function () {
+                //$(window).scrollTop()这个方法是当前滚动条滚动的距离
+                //$(window).height()获取当前窗体的高度
+                //$(document).height()获取当前文档的高度
+                var bot = 50; //bot是底部距离的高度
+                if ((bot + $(window).scrollTop()) >= ($(document).height() - $(window).height())) {
+                    //当底部基本距离+滚动的高度〉=文档的高度-窗体的高度时；
+                    //我们需要去异步加载数据了
+                    //$.getJSON("url", { page: "2" }, function (str) { alert(str); });
+                    var strHtml = "";
+
+                    for (var i = 0; i < 6; i++) {
+                        strHtml += '<div class="col-sm-4">';
+                        strHtml += '    <div class="ct-product">';
+                        strHtml += '        <div class="image">';
+                        strHtml += '            <img src="images/product-06.jpg" alt=""></div>';
+                        strHtml += '        <div class="inner">';
+                        strHtml += '            <span class="ct-product-title">费用:20元</span><span class="ct-product-titler">11' + i + '人浏览</span>';
+                        strHtml += '            <p class="ct-product-description">';
+                        strHtml += '                A very delicious macaroonsA very delicious macaroons</p>';
+                        strHtml += '            <span class="ct-product-title">时间:2016-12-24</span><span class="ct-product-titler">地点:武候区</span>';
+                        //                        strHtml += '            <p class="ct-product-price">';
+                        //                        strHtml += '                ★</p>';
+                        strHtml += '                        <div class="fx_bd">';
+                        strHtml += '                            <div class="bdsharebuttonbox bdshare-button-style0-24">';
+                        strHtml += '                                <a title="收藏" name="bds_soc" class="bds_soc" data-cmd="soc"></a>';
+                        strHtml += '                                <a title="赞" name="bds_zan" class="bds_zan" data-cmd="zan"></a>';
+                        strHtml += '                            </div>';
+                        strHtml += '                        </div>';
+                        strHtml += '        </div>';
+                        strHtml += '    </div>';
+                        strHtml += '</div>';
+                    }
+                    var listCount = $("#list-col > .col-sm-4").length;
+                    if (listCount < 21)
+                        $("#list-col").append(strHtml);
+                    //                    if (listCount >= 21)
+                    //                        $("#list-col").html(strHtml);
+                    //                    else
+                    //                        $("#list-col").append(strHtml);
+                }
+            });
+            //-----------------------------------排序---------------------------------------------
+            var sortType = "asc";
+            var sortCols = getElementsByClassName("sort_able");
+            for (i = 0; i < sortCols.length; i++) {
+                var sortCol = sortCols[i];
+                sortCol.onclick = function () {
+                    sortType = (sortType == "asc") ? "desc" : "asc";
+                    //this.className = "sort_" + sortType;
+                    $(this).css('background', 'url(images/' + sortType + '.png) 102% center no-repeat');
+                    //sortTable("tableSort", this.parentNode.cellIndex, sortType);
+                };
+            }
+            function getElementsByClassName(className, node, tag) {
+                node = node || document; //如果省略了参数node，就从document中搜索，否则从node节点开始搜索
+                if (node.getElementsByClassName)
+                    return node.getElementsByClassName(className);
+                else {
+                    tag = tag || "*";
+                    var searchElems = [];
+                    var elems = node.getElementsByTagName(tag);
+                    for (i = 0; i < elems.length; i++) {
+                        var elem = elems[i];
+                        if (elem.className.indexOf(className) != -1)
+                            searchElems.push(elem);
+                    }
+                    return searchElems;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
